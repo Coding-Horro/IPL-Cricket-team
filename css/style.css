@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --bg-primary: 	#7d05c2;
+    --bg-pure: #fff;
+    --bg-dark:#000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* Reusable Css */
+.btn{
+    background-color: var(--bg-primary);
+    color: var(--bg-pure);
+    font-size: 0.7rem;
+    border: 1px solid white;
+    outline: none;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    border: 1px solid var(--bg-primary);
+    background: transparent;
+    color: var(--bg-dark);
+}
+.nav nav ul li a:hover{
+    background-color: #ffd700;
+    color: black;
+}
+/* Reusable CSS */
+.nav{
+    background-color: var(--bg-primary);
+}
+.nav nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.nav nav ul li{
+    margin-left: 2rem;
+    list-style: none;
+}
+.nav nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.services{
+    width: 96vw;
+    margin: 1rem auto;
+}
+section .teamcard{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+section .teamcard a{
+    text-decoration: none;
+    color: #000;
+}
+section .teamcard .teamcard-item{
+    text-align: center;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    width: 15rem;
+    height: 20rem;
+    transition: all 0.5s ease;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+section .teamcard .teamcard-item:hover{
+    transform: translateY(-1.2rem);
+}
+section .teamcard .teamcard-item .fa{
+    color: var(--bg-primary);
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+section .teamcard .teamcard-item img{
+    height: 8rem;
+    width: 8rem;
+    margin-bottom: 1.5rem;
+}
+section .teamcard .teamcard-item h1{
+    margin-bottom: 1rem;
+}
+section .teamcard .teamcard-item p{
+    margin-bottom: 1.5rem;
+}
+section.hire{
+    margin: 5rem 0;
+    text-align: center;
+}
+.hire .searchBox{
+    width: 30rem;
+    margin: 1rem auto;
+}
+.hire .searchBox input{
+    height: 2.5rem;
+    width: 20rem;
+    border: none;
+    padding: 1rem;
+    outline: none;
+    border-radius: 30px 0px 0 30px;
+}
+.hire .searchBox button{
+    height: 2.5rem;
+    width: 6rem;
+    border: none;
+    cursor: pointer;
+    background: #ffd700;
+    color: black;
+    font-weight: bolder;
+    border-radius: 0 30px 30px 0;
+}
+section.footer{
+    background: var(--bg-primary);
+}
+.footer_content{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+.footer_content h2{
+    color: var(--bg-pure);
+}
+.footer_content .social_icon i{
+    color: var(--bg-pure);
+    margin-left: 1rem;
+} 
+.footer_content ul{
+    display: flex;
+}
+.footer_content ul li{
+    list-style: none;
+    margin-left: 1.5rem;
+}
+.footer_content ul li a{
+    text-decoration: none;
+    color: var(--bg-pure);
+}
+.main_nav{
+    position: relative;
+}
+#mobile_menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 90;
+}
+#mobile_menu i{
+    color: black;
+    font-size: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile_navlist{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #659dbd;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+}
+.mobile_navlist button{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mobile_navlist button i{
+    color: var(--bg-pure);
+    font-size: 2rem;
+}
+.mobile_navlist ul{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   list-style: none;
+}
+.mobile_navlist ul li{
+    margin: 2rem 0;
+}
+.mobile_navlist ul li a{
+    text-decoration: none;
+    color: var(--bg-pure);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.mobile_navlist ul li a:hover{
+    color:black;
+}
+.open{
+    transform: translateX(0);
+}
+@media(max-width:1269px){
+    .services .teamcard .teamcard-item{
+        margin: 0px 16px;
+    }
+}
+@media(max-width:961px){
+    .services .teamcard{
+        flex-direction: column;
+    }
+    .services .teamcard .teamcard-item{
+        margin: 2rem 2rem;
+        width: 30rem;
+        height: 40rem;
+    }
+}
+@media(max-width:951px){
+    .nav nav{
+        position: absolute;
+        right: 0;
+    }
+}
+@media(max-width:850px){
+    #mobile_menu i{
+        opacity: 1;
+        pointer-events:visible;
+    }
+}
+@media(max-width:850px){
+    .nav nav{
+        display: none;
+    }
+}
+  
+@media(max-width:787px){
+    .footer .footer_content{
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+    .footer .footer_content h2, .footer .footer_content ul{
+        margin-bottom: 1.5rem;
+    }
+    .footer{
+        width: auto;
+    }
+}
+@media(max-width:700px){
+    body{
+        width: auto;
+    }
+}
+@media(max-width:643px){
+    #mobile_menu i{
+        color: white;
+    }
+}
+@media(max-width:528px){
+    .services .teamcard .teamcard-item{
+        margin: 2rem 2rem;
+        width: 400px;
+        height: 400px;
+    }
+    .footer .footer_content ul{
+        display: none;
+    }
+}
+@media(max-width:440px){
+    .services .teamcard .teamcard-item{
+        margin: 2rem 2rem;
+        width: 350px;
+        height: 450px;
+    }
+}
+@media(max-width:380px){
+    .services .teamcard .teamcard-item{
+        margin: 2rem 2rem;
+        width: 300px;
+        height: 430px;
+    }
+}

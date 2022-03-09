@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2022 | PBKS</title>
+    <link rel="stylesheet" href="../css/teampage.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="">about IPL</a></li>
+                    <li><a href="">tata IPL</a></li>
+                    <li><a href="">Watch IPL</a></li>
+                </ul>
+            </div>
+            <div class="hire">
+                <div class="searchBox">
+                    <input type="text" placeholder="Enter Team Name"><button>Search</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="teamdetails">
+        <div class="main">
+            <div class="left">
+                <img src="../images/PBKS1.png" alt="">
+            </div>
+            <div class="right">
+                <div class="row">
+                    <div class="teamdetailsinner">
+                        <h3>Team Name</h3>
+                        <h1>Punjab Kings</h1>
+                    </div>
+                    <div class="teamdetailsinner">
+                        <h3>Captain Name</h3>
+                        <h1>Mayank Agarwal</h1>
+                    </div>
+                    <div class="teamdetailsinner">
+                        <h3>Player Count</h3>
+                        <h1>25</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="teamdetailsinner">
+                        <h3>Championship Won Count</h3>
+                        <h1>1</h1>
+                    </div>
+                    <div class="teamdetailsinner">
+                        <h3>Top Batsman</h3>
+                        <h1>Jonny Bairstow</h1>
+                    </div>
+                    <div class="teamdetailsinner" id="boler">
+                        <h3>Top Bowler</h3>
+                        <h1>Kagiso Rabada</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 style="padding: 2rem 0;text-align: center;color: #7d05c2;font-weight: bold;">Team Players Details</h1>
+
+    <section class="teamplayers">
+        <div class="playerlist">
+    
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer_content">
+            <!-- <h2>&copy;TATA IPL 2022.</h2> -->
+            <img src="../images/TATA.png" alt="" style="height: 4rem;width: auto;">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="">About IPL</a></li>
+                <li><a href="">TATA IPL</a></li>
+                <li><a href="">Watch IPLCV</a></li>
+            </ul>
+            <div class="social_icon">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        console.log("I am in PBKS Page");
+        let playerList = JSON.parse(localStorage.getItem("playerData"));
+        console.log(playerList);
+        const playerListDiv = document.querySelector(".playerlist");
+        function createCard() {
+            for (let i = 0; i < playerList.length; i++) {
+                if(playerList[i].from == "PBKS")
+                {
+                    if(playerList[i].isPlaying == "true")
+                    {
+                        playerList[i].isPlaying = "Playing";
+                    }
+                    else
+                    {
+                        playerList[i].isPlaying = "On-bench";
+                    }
+                    let playerCardDiv = `    
+                                            <div class="playercard-box">
+                                                <div class="photos" style="background-image: linear-gradient(to top right,#cb0a2b,#df314f);">
+                                                    <img src="data:image/png;base64,${playerList[i].photo}" alt="">
+                                                    <div class="corner-logo"><img
+                                                        src="../images/PBKS.png">
+                                                    </div>
+                                                </div>
+
+                                                <div class="playercard-box-inner">
+                                                    <p>${playerList[i].playerName}</p>
+                                                    <p>${playerList[i].from}</p>
+                                                    <p>${playerList[i].price} <span>Cr.</span> </p>
+                                                    <p>${playerList[i].isPlaying}</p>
+                                                    <p>${playerList[i].description}</p>
+                                                </div>
+                                            </div>
+                                        `;
+
+                    playerListDiv.innerHTML += playerCardDiv;
+                }
+            }
+        }
+        createCard();
+    </script>
+</body>
+
+</html>
