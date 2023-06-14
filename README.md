@@ -1,7 +1,6 @@
 # IPL-Cricket-team
 
-This is an IPL (Indian Premier League) website built using HTML, CSS, and JavaScript. It provides an interactive platform for users to explore and stay updated with the latest information about their favorite IPL teams and players.
-#Link
+This is an IPL (Indian Premier League) website built using HTML, CSS, and JavaScript. It provides an interactive platform for users to explore and stay updated with the latest information about their favorite IPL teams and players. Here is the link
 https://coding-horro.github.io/IPL-Cricket-team/index.html
 ## Features
 
