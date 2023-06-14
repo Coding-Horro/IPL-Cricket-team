@@ -17,7 +17,7 @@ This is an IPL (Indian Premier League) website built using HTML, CSS, and JavaSc
 
 To get a local copy of this project up and running, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/ipl-website.git`
+1. Clone the repository: `git clone https://github.com/dev-skjena/IPL-Cricket-team.git`
 2. Navigate to the project directory: `cd ipl-website`
 3. Open the `index.html` file in your preferred web browser.
 
